@@ -1,6 +1,6 @@
 # Simulador de CLP Modbus da Protut
 
-![Screenshot da tela principal](https://raw.githubusercontent.com/protutjr/protut-plc-sim/main/Screenshot.png?token=GHSAT0AAAAAAB6KVF46GK3M26ZQESK7AOPCZDY3CPA)
+![Screenshot da tela principal](https://github.com/protutjr/protut-plc-sim/blob/ae2d9e481ea683030d0a864d0082f5b544940bf3/Screenshot.png)
 
 ### Sobre este software
 Este software simula os recursos de comunicação de um dispositivo Modbus TCP. Desenvolvido para a Empresa Júnior [Protut](www.protut.com.br), este é um WebApp simples para o Apache Tomcat que pode rodar lado a lado com outras aplicações (tipicamente o ScadaBR).
