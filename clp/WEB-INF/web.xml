@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+
+    <display-name>Simulador de CLP Modbus da Protut</display-name>
+    <description>
+		This app simulates a Modbus TCP Programmable Logic Controller.
+    </description>
+
+	<!-- Get Values Servlet -->
+	<servlet>
+        <servlet-name>GetValuesServlet</servlet-name>
+        <servlet-class>br.com.protut.GetValuesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetValuesServlet</servlet-name>
+        <url-pattern>/get/values</url-pattern>
+    </servlet-mapping>
+
+	<!-- Set Default Values Servlet -->
+    <servlet>
+        <servlet-name>SetDefaultValuesServlet</servlet-name>
+        <servlet-class>br.com.protut.SetDefaultValuesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SetDefaultValuesServlet</servlet-name>
+        <url-pattern>/post/values/default</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Set Random Values Servlet -->
+    <servlet>
+        <servlet-name>SetRandomValuesServlet</servlet-name>
+        <servlet-class>br.com.protut.SetRandomValuesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SetRandomValuesServlet</servlet-name>
+        <url-pattern>/post/values/random</url-pattern>
+    </servlet-mapping>
+    
+	<listener>
+		<listener-class>br.com.protut.AppContextListener</listener-class>
+	</listener>
+</web-app>

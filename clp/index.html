@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Simulador CLP Protut</title>
+	
+	<link rel="stylesheet" href="./resources/css/w3.css">
+	<link rel="stylesheet" href="./resources/css/style.css">
+	<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+	
+	<meta charset="UTF-8">
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<main>
+		<div class="flex">
+			<div id="svg-container"></div>			
+
+			<div>
+				<table id="modbus-table" class="w3-table w3-small w3-table-all w3-border">
+					<!-- Cabeçalho -->
+					<tr class="w3-dark-gray">
+						<td colspan="2" class="w3-center title">Endereços Modbus</td>	
+					</tr>
+					<tr>
+						<td class="w3-teal w3-center">Endereço</td>
+						<td class="w3-teal w3-center" style="border-color: #FFFFFF;">Valor</td>
+					</tr>
+					<!-- Coils -->
+					<tr>
+						<td class="w3-dark-gray w3-text-white" colspan="2">Bobinas (coils)</td>
+					</tr>					
+					<tr>
+						<td>0 [Q0]:</td>
+						<td id="Q0value"></td>
+					</tr>
+					<tr>
+						<td>1 [Q1]:</td>
+						<td id="Q1value"></td>
+					</tr>
+					<tr>
+						<td>2 [Q2]:</td>
+						<td id="Q2value"></td>
+					</tr>
+					<tr>
+						<td>3 [Q3]:</td>
+						<td id="Q3value"></td>
+					</tr>
+					<!-- Discrete inputs -->
+					<tr>
+						<td class="w3-dark-gray w3-text-white" colspan="2">Entradas discretas (discrete inputs)</td>
+					</tr>					
+					<tr>
+						<td>0 [I0]:</td>
+						<td id="I0value"></td>
+					</tr>
+					<tr>
+						<td>1 [I1]:</td>
+						<td id="I1value"></td>
+					</tr>
+					<tr>
+						<td>2 [I2]:</td>
+						<td id="I2value"></td>
+					</tr>
+					<tr>
+						<td>3 [I3]:</td>
+						<td id="I3value"></td>
+					</tr>
+					<tr>
+						<td>4 [I4]:</td>
+						<td id="I4value"></td>
+					</tr>
+					<tr>
+						<td>5 [I5]:</td>
+						<td id="I5value"></td>
+					</tr>
+					<tr>
+						<td>6 [I6]:</td>
+						<td id="I6value"></td>
+					</tr>
+					<tr>
+						<td>7 [I7]:</td>
+						<td id="I7value"></td>
+					</tr>
+					<!-- Input registers -->
+					<tr>
+						<td class="w3-dark-gray w3-text-white" colspan="2">Registradores de entrada (input registers)</td>
+					</tr>
+					<tr>
+						<td>0 [Tensão]:</td>
+						<td id="IR0value"></td>
+					</tr>
+					<tr>
+						<td>1 [Temperatura]:</td>
+						<td id="IR1value"></td>
+					</tr>
+					<!-- Holding registers -->
+					<tr>
+						<td class="w3-dark-gray w3-text-white" colspan="2">Registradores holding (holding registers)</td>
+					</tr>
+					<tr>
+						<td>0 [Porcentagem]:</td>
+						<td id="HR0value"></td>
+					</tr>
+					<tr>
+						<td>1 [Porcentagem]:</td>
+						<td id="HR1value"></td>
+					</tr>					
+				</table>
+			</div>
+			
+			<div>
+				<div class="w3-border">
+					<header class="w3-dark-gray">
+						<h4 class="w3-text-white w3-center title">Opções</h4>
+					</header>
+					<div class="w3-container w3-padding-16 optionslist">
+						<label>
+							<input type="checkbox" onclick="showLogicStates(this.checked);">
+							Exibir estados lógicos
+						</label>
+						<label>
+							<input type="checkbox" onclick="showLamps(this.checked);">
+							Exibir lâmpadas nas saídas
+						</label>
+						<button class="w3-button w3-dark-gray" onclick="randomValues();">Definir valores aleatórios</button>
+						<button class="w3-button w3-dark-gray" onclick="defaultValues();">Restaurar valores padrão</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</main>	
+	
+	<script src="./resources/js/index.js"></script>
+</body>
+
+</html> 
