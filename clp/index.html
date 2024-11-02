@@ -8,16 +8,18 @@
 	<link rel="stylesheet" href="./resources/css/style.css">
 	<link rel="icon" href="./favicon.svg" type="image/svg+xml">
 	
+	<meta name="viewport" content="width=device-width">
+
 	<meta charset="UTF-8">
 	<meta charset="utf-8">
 </head>
 
 <body>
 	<main>
-		<div class="flex">
-			<div id="svg-container"></div>			
+		<div class="content w3-cell-row">
+			<div id="svg-container" class="col-1 w3-mobile"></div>			
 
-			<div>
+			<div class="col-2 w3-cell w3-mobile">
 				<table id="modbus-table" class="w3-table w3-small w3-table-all w3-border">
 					<!-- Cabeçalho -->
 					<tr class="w3-dark-gray">
@@ -110,7 +112,7 @@
 				</table>
 			</div>
 			
-			<div>
+			<div class="col-3 w3-cell w3-mobile">
 				<div class="w3-border">
 					<header class="w3-dark-gray">
 						<h4 class="w3-text-white w3-center title">Opções</h4>
@@ -126,6 +128,17 @@
 						</label>
 						<button class="w3-button w3-dark-gray" onclick="randomValues();">Definir valores aleatórios</button>
 						<button class="w3-button w3-dark-gray" onclick="defaultValues();">Restaurar valores padrão</button>
+					</div>
+				</div>
+				
+				<div class="w3-border" style="margin-top: 5px;">
+					<header class="w3-dark-gray">
+						<h4 class="w3-text-white w3-center title">Informações da conexão</h4>
+					</header>
+					<div class="w3-container w3-padding-16 w3-small">
+						<p>ID do escravo Modbus: <b id="slave-id"></b></p>
+						<p>Porta comunicação: <b id="tcp-port"></b></p>
+						<p>Status TCP keep-alive: <b id="use-keep-alive"></b></p>
 					</div>
 				</div>
 			</div>

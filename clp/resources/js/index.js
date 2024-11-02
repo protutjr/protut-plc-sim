@@ -83,4 +83,18 @@ fetch("resources/images/PLC Protut.svg").then(response => {
 	}
 });
 
+fetch("get/config").then(response => {
+	if (response.ok) {
+		response.json().then(json => {
+			let slaveIdSpan = document.getElementById("slave-id");
+			let tcpPortSpan = document.getElementById("tcp-port");
+			let keepAliveSpan = document.getElementById("use-keep-alive");
+			
+			slaveIdSpan.innerText = json["slave_id"];
+			tcpPortSpan.innerText = json["tcp_port"];
+			keepAliveSpan.innerText = json["use_keep_alive"] ? "ON" : "OFF";
+		});
+	}
+});
+
 setInterval(update, 100);

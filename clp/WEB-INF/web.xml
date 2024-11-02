@@ -9,6 +9,16 @@
 		This app simulates a Modbus TCP Programmable Logic Controller.
     </description>
 
+	<!-- Get Modbus Configuration Servlet -->
+	<servlet>
+        <servlet-name>GetConfigServlet</servlet-name>
+        <servlet-class>br.com.protut.GetConfigServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetConfigServlet</servlet-name>
+        <url-pattern>/get/config</url-pattern>
+    </servlet-mapping>
+	
 	<!-- Get Values Servlet -->
 	<servlet>
         <servlet-name>GetValuesServlet</servlet-name>

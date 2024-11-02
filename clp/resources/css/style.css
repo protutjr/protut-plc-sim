@@ -1,11 +1,21 @@
-.flex { 
-	display: flex;
-	margin: 10px;
-	padding-top: 5px;
-	align-items: flex-start;
+#svg-container {	
+	padding: 5px;
 }
 
-.flex > div {
+main {
+	overflow: scroll;
+}
+
+.col-2 {
+	width: 400px;
+	min-width: 300px;
+}
+.col-3 {
+	width: 280px;
+	min-width: 250px;
+}
+
+.content > div {
 	padding: 5px;
 }
 
@@ -22,12 +32,13 @@
 }
 
 #svg-container svg {
-	max-height: 95vh;
+	max-height: 80vh;
+	min-width: 400px;
 }
 
 #modbus-table td {
 	padding: 3px;
-	width: 400px;
+	max-width: 400px;
 }
 
 #modbus-table td:nth-child(2) {
